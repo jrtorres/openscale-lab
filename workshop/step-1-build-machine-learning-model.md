@@ -1,4 +1,4 @@
-# Step 1: Build Machine Learning Model
+# 1. Build Machine Learning Model
 
 ## Getting Super Powers
 

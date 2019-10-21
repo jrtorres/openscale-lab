@@ -4,7 +4,7 @@ description: >-
   OpenScale to show how a machine learning model can be monitored.
 ---
 
-# Watson OpenScale Lab
+# Introduction
 
 ## Getting Super Powers
 
