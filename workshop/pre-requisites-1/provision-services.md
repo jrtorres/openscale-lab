@@ -2,10 +2,10 @@
 description: Provision the services necessary for the workshop.
 ---
 
-# IBM Cloud Services
+# Provision IBM Cloud Services
 
 We will be using several services in this workshop.   
-1. `Watson Studio` - Platform to  
+1. Watson Studio [https://www.ibm.com/cloud/watson-studio](https://www.ibm.com/cloud/watson-studio)   
 2. Watson Machine Learning  
 3. Watson OpenScale
 
@@ -22,4 +22,8 @@ To provision these two services, follow these steps:
 ## Watson Machine Learning
 
 
+
+1. Open a browser window and navigate to: [https://dataplatform.cloud.ibm.com/registration/stepone?context=wdp&apps=all](https://dataplatform.cloud.ibm.com/registration/stepone?context=wdp&apps=all). 
+2. Leave the _**'Dallas'**_  region selected.
+3. Then provide your email address and "Create an IBM Cloud Account" or "Log in to activate Watson"
 

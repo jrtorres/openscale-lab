@@ -1,7 +1,7 @@
 ---
 description: >-
   This lab will build a machine learning model and connect it with Watson
-  OpenScale to show how a machine learning model can be monitored.
+  OpenScale to demonstrate how a model can be monitored.
 ---
 
 # Introduction
