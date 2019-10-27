@@ -1,2 +1,2 @@
-# Pre-requisites
+# Lab Setup
 
