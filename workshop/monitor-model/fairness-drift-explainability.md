@@ -20,7 +20,7 @@ Under the 'Notebooks' section, _**Click**_ on the _**'2-fairness-drive-explainab
 
 ### 1.2 Update Credentials
 
-After the notebook environment starts up, scroll down to the section titled _**'Service Credentials'**_.  Copy and Paste the Watson Machine Learning service credentials and the Cloud API Key that you saved to a text editor earlier.
+After the notebook environment starts up, scroll down to the section titled _**'Configure Service Credentials'**_.  Copy and Paste the Watson Machine Learning service credentials and the Cloud API Key that you saved to a text editor earlier.
 
 ![](../.gitbook/assets/screen-shot-2019-10-27-at-8.47.48-pm.png)
 
