@@ -9,8 +9,6 @@ description: >-
 
 ## Trust in AI
 
-
-
 ### Watson OpenScale
 
 Watson OpenScale tracks and measures outcomes from your AI models, and helps ensure they remain fair, explainable and compliant wherever your models were built or are running.
