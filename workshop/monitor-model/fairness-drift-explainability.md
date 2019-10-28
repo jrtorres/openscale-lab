@@ -99,7 +99,7 @@ From the transaction explanation page, you can see a breakdown of the features c
 Advanced explanations are not available for regression, image, and unstructured text models.
 {% endhint %}
 
-#### 2.2 Check Model Drift
+### 2.2 Check Model Drift
 
 Watson OpenScale analyzes transactions to detect drift in model accuracy as well as drift in data. It then groups these transactions 
 
