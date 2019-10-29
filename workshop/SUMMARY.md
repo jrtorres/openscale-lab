@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Lab Setup](pre-requisites-1/README.md)
+* [Lab Environment Setup](pre-requisites-1/README.md)
   * [IBM Cloud Services and Keys](pre-requisites-1/provision-services.md)
   * [Project Setup](pre-requisites-1/project-setup.md)
 * [Build Model & Configure Watson OpenScale](build-ml-model-configure-openscae.md)
