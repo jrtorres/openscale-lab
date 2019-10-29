@@ -13,8 +13,10 @@ You will work in a Jupyter notebook on Watson studio, which will use clients to 
 As you enable and configure different monitoring capabilities, you will also use the Watson OpenScale web interface to visualize metrics being captured/calculated.
 
 {% hint style="info" %}
-The topology we are using in this lab is just one approach that is supported.
+The topology we are using in this lab is just one approach that is supported. See the [Wrap-up section](../wrap-up.md) for resources on other deployment options.
+{% endhint %}
 
+{% hint style="info" %}
 In this lab we are programmatically interacting with these services. We will be using the python client to interact with Watson OpenScale and Watson Machine Learning. This is not a requirement as these services provide web interface and REST APIs.
 {% endhint %}
 

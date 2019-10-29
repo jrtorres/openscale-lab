@@ -1,18 +1,31 @@
+---
+description: Closing and useful resources.
+---
+
 # Wrap-up
 
-Watson OpenScale’s performance monitoring, bias mitigation and explainability features help to provide insight into model performance at runtime, so businesses can trust their AI systems
+In this lab, we walked through the use of Watson OpenScale’s performance monitoring, bias mitigation and explainability features. Showing how these capabilities help to provide insight into model performance at runtime and can ultimately create more fair and explainable outcomes for customers. 
+
+Below are some additional tips, resources and links you can explore.
+
+## Shut Down Resources
+
+If you used a Spark Python Jupyter kernel to run the lab, you can stop the environments to save capacity unit hours on your account
+
+1. In the Watson Studio web interface. _**Click**_ on the three horizontal bars on the top left corner.
+2. From the menu, select the **'Environment Runtimes'** option.  ![](.gitbook/assets/screen-shot-2019-10-28-at-10.14.44-pm.png) 
+3. Under the 'Active environment runtimes', if you see any running environments, you can shut them down by clicking on the three vertical dots under the 'Actions' column and selected the 'Stop' option   ![](.gitbook/assets/screen-shot-2019-10-28-at-10.21.12-pm.png) 
+
+## Additional Watson OpenScale Resources
+
+{% embed url="https://cloud.ibm.com/docs/ai-openscale?topic=ai-openscale-gettingstarted" caption="Watson OpenScale Documentation" %}
+
+{% embed url="https://www.ibm.com/demos/collection/IBM-Watson-OpenScale/" caption="Watson OpenScale Demos / Lab" %}
 
 
 
-Watson OpenScale can help lenders avoid black box AI and opaque predictions, providing insight into the performance/bias of a credit risk model in production, limit risk exposure from regulations, and ultimately create more fair and explainable outcomes for customers. and increase confidence in the value of AI
+#### Open-source Initiatives
 
-## Preserve resources
-
-If you used a Spark Python Jupyter kernel to run the lab, you can stop the environments to save capacity unit hours.
-
-{% hint style="info" %}
-IBM’s open-source initiatives, [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) and [AI Explainability 360](https://www.ibm.com/blogs/research/2019/08/ai-explainability-360/). These free toolkits allow data scientists to identify potential issues with their models at build time.
-{% endhint %}
-
-
+* Trust in AI from IBM Research [https://www.research.ibm.com/artificial-intelligence/trusted-ai/](https://www.research.ibm.com/artificial-intelligence/trusted-ai/)
+* [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) and [AI Explainability 360](https://www.ibm.com/blogs/research/2019/08/ai-explainability-360/). These free toolkits allow data scientists to identify potential issues with their models at build time.
 

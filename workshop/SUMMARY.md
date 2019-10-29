@@ -10,5 +10,4 @@
   * [Quality and Application KPIs](monitor-model/quality-application-kpis.md)
 * [\[Optional\] Payload Analytics](payload-analytics.md)
 * [Wrap-up](wrap-up.md)
-* [IBM Developer](https://developer.ibm.com/)
 
