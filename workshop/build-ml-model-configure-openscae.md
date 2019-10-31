@@ -7,16 +7,12 @@ description: >-
 # Build Model & Configure Watson OpenScale
 
 {% hint style="info" %}
-Although this lab is showing the end to end process of building, deploying, and monitoring/managing a machine learning model. Models do not have to be built in Watson Studio nor deployed to Watson Machine Learning to be monitored with OpenScale.   Watson OpenScale is an open platform that can manage production models in a variety of environments. See resources in the [Wrap-up section ](wrap-up.md)for examples of other models or deployment environments. 
+Although this lab is showing a Spark ML model deployed on Watson Machine Learning \(WML\), models do not have to be built in Watson Studio nor deployed to WML to be monitored with OpenScale.   Watson OpenScale is an open platform that can manage production models in a variety of environments. See resources in the [Wrap-up section ](wrap-up.md)for examples of other models or deployment environments. 
 {% endhint %}
 
-{% hint style="info" %}
-**Note**: We are using the python client to interact with Watson OpenScale. The configuration down below can also be accomplished through the web interface or the REST APIs.
-{% endhint %}
+## Model Deployment Notebook
 
-## Model Creation Notebook
-
-The first notebook in the project you imported will create a model and configure OpenScale to start monitoring that model.
+The first notebook in the project you imported will deploy a model and configure OpenScale to start monitoring that model.
 
 ### 1.1 Open Notebook
 
@@ -24,13 +20,13 @@ The first notebook in the project you imported will create a model and configure
 
 ![](.gitbook/assets/screen-shot-2019-10-27-at-4.00.26-pm.png)
 
-* _**Click**_ on the model creation/configuration notebook \(_notebook name is prefixed with "1-"_ \) and then click on the pencil icon to enable you to edit / run the notebook.
+* _**Click**_ on the model deployment/configuration notebook _'1-deploysparkmlmodel-wos-configuration'_ and then click on the pencil icon to enable you to edit / run the notebook.
+
+![](.gitbook/assets/screen-shot-2019-10-30-at-7.44.07-pm.png)
 
 {% hint style="info" %}
-_The project may have multiple model creation notebooks that build models using different libraries / algorithms. For this lab, select the Spark model - 1-sparkmlmodel-wos-configuration._
+_The project also contains multiple model creation notebooks that actually step through the process of building the credit risk models using different libraries / algorithms._
 {% endhint %}
-
-![](.gitbook/assets/screen-shot-2019-10-27-at-4.41.07-pm.png)
 
 ### 1.2 Update Credentials
 
@@ -44,8 +40,6 @@ _The project may have multiple model creation notebooks that build models using 
 
 {% hint style="info" %}
 While the cell is running, an asterisk \(`[*]`\) will show up to the left of the cell. When that cell has finished executing a sequential number will show up. Generally, you want to wait until the cell finished executing before running the subsequent cells.
-
-Alternatively, you can elect to run all the cells by clicking the **'Run All'** option under the **'Cell'** menu
 {% endhint %}
 
 {% hint style="success" %}
@@ -56,10 +50,10 @@ By the end of the notebook, you should have a model created and deployed. With a
 
 Now that you have created a machine learning model and configured OpenScale, you can utilize the OpenScale dashboard to monitor the model. Although we have not enabled any type of monitoring yet, with the deployment approach we are using for this lab \( Watson Machine Learning as the model engine \), we will be able to see payload and some performance information out of the box.
 
-* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com) \([https://aiopenscale.cloud.ibm.com](https://aiopenscale.cloud.ibm.com)\) in the same browser \(but separate tab\) as you used to run the Watson Studio notebook. 
+* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com) in the same browser \(but separate tab\) as you used to run the Watson Studio notebook. 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
-![](.gitbook/assets/screen-shot-2019-10-25-at-11.46.23-am.png)
+![](.gitbook/assets/screen-shot-2019-10-30-at-9.16.41-pm.png)
 
 {% hint style="info" %}
 Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
@@ -67,22 +61,24 @@ Do not worry if the name you see does not match exactly with the screenshot. The
 
 ### 2.1 Throughput
 
-* From the 'Model Monitors' tab, click on the deployment you have created. You will see a graph of average throughput
+* From the 'Model Monitors' tab, click on the deployment tile you have created. You will see a graph of average throughput over time \(we have only run a small number of requests through our model, so we see on spike in the graph\)
 
-![](.gitbook/assets/screen-shot-2019-10-25-at-11.47.14-am.png)
+![](.gitbook/assets/screen-shot-2019-10-30-at-7.50.23-pm.png)
 
 * Click on the bar in the throughput graph and you will be able to find the actual transactions \(if you executed the cells of the notebook in the previous section only once, you would see just the 8 scoring requests we made after enabling the subscription\).
 
-![](.gitbook/assets/screen-shot-2019-10-25-at-11.47.29-am.png)
+![](.gitbook/assets/screen-shot-2019-10-30-at-7.52.34-pm.png)
 
 ### 2.2 Confidence Distribution
 
 You can also use the OpenScale dashboard to visualize the confidence of the models predictions. 
 
+* Click on the back arrow icon next to the chart title:  ![](.gitbook/assets/screen-shot-2019-10-30-at-7.53.59-pm.png) 
 * Click on the _**'Predictions by Confidence'**_ option on the left panel.
-* You will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
 
-![](.gitbook/assets/screen-shot-2019-10-25-at-11.47.56-am.png)
+![](.gitbook/assets/screen-shot-2019-10-30-at-7.55.49-pm.png)
+
+* You will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
 
 {% hint style="success" %}
 If you see payload information you have successfully subscribed Watson OpenScale to the deployed machine learning model. You're ready to continue to the next section to enable different model monitors.

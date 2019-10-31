@@ -8,7 +8,31 @@ description: >-
 
 ## Fairness, Drift and Explainability Notebook
 
-The second notebook in the project you imported will now enable these three monitors in the subscription.
+In this section we will enable the monitors in OpenScale. We could configure these monitors using the Jupyter notebook supplied in the project or through the OpenScale web interface. For this section, we will use the web interface.
+
+{% hint style="info" %}
+Feel free to open the notebook '_2-fairness-drift-explainability-monitors' to see how the monitors can be enabled through code._
+{% endhint %}
+
+### 2.1 Fairness Monitor
+
+The fairness monitor scans the requests sent to your model deployment \(i.e the payload\) to ensure fair outcomes across different populations. In this lab, the credit risk model uses a training dataset that contains 20 attributes about each loan applicants. Two of those attributes - 'Sex' and 'Age' - are the ones we will monitor for bias.
+
+* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
+* When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
+
+![](../.gitbook/assets/screen-shot-2019-10-30-at-9.16.41-pm.png)
+
+* **Click** on **'Configure monitors'**   ![](../.gitbook/assets/screen-shot-2019-10-30-at-9.46.07-pm.png) 
+* Click on 
+
+
+
+
+
+
+
+
 
 ### 1.1 Open Notebook
 

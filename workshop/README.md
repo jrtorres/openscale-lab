@@ -19,19 +19,20 @@ Watson OpenScale provides a set of monitoring and management tools that help you
 
 ## Lab Overview
 
-The scenario we will use in this lab is around credit lending and risk. Lenders want to give more loans to a wider variety of customers. To do this lenders are turning to complex credit risk machine learning models \(sometimes black box models\) that help determine if those customers are eligible for a loan based on a variety of different features, such as credit history, age, number of dependents, application education, job title, etc. 
+The scenario we will use in this lab is around credit lending. Lenders want to give more loans to a wider variety of customers. To do this, they are turning to complex credit risk machine learning models \(sometimes black box models\) that help determine if those customers are eligible for a loan based on a variety of different features, such as credit history, age, number of dependents, application education, job title, etc. 
 
-As credit risk models expand to use these alternate data sources, we introduce risk that the model may find some unexpected correlations in the data and become biased based on an applicant’s age, gender, or other personal traits. 
+As credit risk models expand to use these alternate data sources, we introduce risk that the model may find some unexpected correlations in the data and make biased predictions based on an applicant’s age, gender, or other personal traits. 
 
 ![](.gitbook/assets/screen-shot-2019-10-28-at-1.53.05-pm.png)
 
-In this lab will walk through the process of creating this credit risk model and then monitoring the model to explore the different aspects of trusted AI. We will build/configure/explore the following topics:
+In this lab will walk through the process of deploying a credit risk model and then monitoring the model to explore the different aspects of trusted AI. By the end of the lab, we will have:
 
-* Monitoring the performance of a deployed production AI models.
-* Evaluating and tracking model quality \(accuracy and other metrics\).
-* Determining and correcting bias that may be exhibited in the model and/or present in the training data.
-* Generating detailed explanations for individual model transaction.
-* Tracking the robustness of the model to alert for drifts in data or accuracy.
+* Deployed a model from development to a runtime environment.
+* Monitored the performance \(operational\) of the model over time.
+* Tracked the model quality \(accuracy metrics\) over time.
+* Identified and explored the fairness of the model as it's receiving new data.
+* Understood how the model arrived at its predictions.
+* Tracked the robustness of the model.
 
 
 

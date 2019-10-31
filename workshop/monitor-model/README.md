@@ -8,20 +8,22 @@ Model monitors allow Watson OpenScale to capture information about the deployed 
 
 * Fairness monitor scans your deployment for biases, to ensure fair outcomes across different populations.
 * Quality monitor \(previously known as the accuracy monitor\) lets you know how well your model predicts outcomes.
-* Drift monitor 
-* Explainability
+* Drift monitor detects when the model drops in accuracy and/or starts receiving data inconsistent with how it was trained.
+* Explainability provides transparency in models by allowing you to see what lead the model to make specific predictions.
 
 ## Data sets
 
-For many of these monitors, OpenScale requires all transactions \(input/request and output/response information\) going to the deployed models to be logged as payload records in the OpenScale data mart.
+For many of these monitors, OpenScale will make use of the following data:
+
+* \(Optional\) Training data that was used to train the model.
+* Transaction data \(input/request and output/response information\) going to the deployed models
+* Feedback data with labeled predictions to measure the effectiveness of predictions and when retraining is needed. 
 
 {% hint style="info" %}
-For this lab since our model is deployed in Watson Machine Learning, the scoring payload is automatically sent to Watson OpenScale when you score the model
+For this lab since our model is deployed in Watson Machine Learning, the scoring payload is automatically sent to Watson OpenScale and stored in its data mart when you score the model.
 {% endhint %}
 
-Some monitors also require feedback data. You must upload feedback data to the Watson OpenScale service on a regular basis to ensure that your model takes into account up-to-date data that may indicate changes in the context of your predictive application. 
-
 {% hint style="info" %}
-**Note**: We are using the python client to interact with Watson OpenScale. The configuration down below can also be accomplished through the web interface or the REST APIs.
+To emulate the monitoring of a model in production, in addition to making scoring/prediction requests to the actual model, you will also inject historical data into the OpenScale data mart.
 {% endhint %}
 
