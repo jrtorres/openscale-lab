@@ -8,12 +8,12 @@ description: >-
 
 ## Quality and Application KPI Notebook
 
-The third notebook in the project you imported will now enable these additional capabilities in the subscription. Quality and Application / Business monitors allow users to track performance of production AI and its impact on business goals.
+Quality and Application / Business monitors allow users to track performance of production AI and its impact on business goals. This time we will use a Jupyter notebook in the project you imported to enable these additional capabilities in the subscription. 
 
 ### 1.1 Open Notebook
 
-* In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page. 
-* Under the 'Notebooks' section, _**Click**_ on the _**'3-quality-businesskpi-monitors'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
+* In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page.
+* Under the 'Notebooks' section, _**Click**_ on the _**'quality-businesskpi-monitors'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
 
 ![](../.gitbook/assets/screen-shot-2019-10-28-at-12.28.12-am.png)
 

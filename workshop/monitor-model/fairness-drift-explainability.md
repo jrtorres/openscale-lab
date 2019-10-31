@@ -11,7 +11,7 @@ description: >-
 OpenScale helps organizations maintain regulatory compliance by tracing and explaining AI decisions across workflows, and intelligently detect and correct bias to improve outcomes. In this section we will enable the monitors in OpenScale. We could configure these monitors using the Jupyter notebook supplied in the project or through the OpenScale web interface. For this section, we will use the web interface.
 
 {% hint style="info" %}
-Feel free to open the notebook '_2-fairness-drift-explainability-monitors' to see how the monitors can be enabled programmatically._
+Feel free to open the notebook '_fairness-drift-explainability-monitors' to see how the monitors can be enabled programmatically._
 {% endhint %}
 
 ### 1.1 Model Details
