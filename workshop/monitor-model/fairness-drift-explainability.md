@@ -233,12 +233,23 @@ Over time, the data coming into our model from the initial training data, impact
 * Drift in data estimates the drop in consistency of the data at runtime as compared to the characteristics of the data at training time.
 {% endhint %}
 
+* Go back to the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
+* When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
+
+![](../.gitbook/assets/screen-shot-2019-10-26-at-9.11.48-pm.png)
+
 * _**Click**_ on the _**'Drop in accuracy'**_ option on the left panel to show the model drift visualization.
 
 ![](../.gitbook/assets/screen-shot-2019-10-28-at-12.11.48-am.png)
 
-* We can see the model has an estimated drop of 2% and that 12% of the transaction data \(scoring requests\) are inconsistent compared to the training data. 
+* We can see the model has an estimated drop of 2% and that 12% of the transaction data \(scoring requests\) are inconsistent compared to the training data.
 * _**Click**_ on a data point in the 'Drop in accuracy' graph \(blue line in screenshot above\) to view drift details.
+
+{% hint style="info" %}
+Note that the screenshots above may not match exactly what you see in your dashboard. The monitors are using the payload \(scoring requests\) that were sent to the model, which were randomly selected. 
+
+In some cases, you may not see a drop in accuracy from model drift. If you do not see anything in your dashboard, you can always submit a new set of requests to the model and trigger the drift evaluation again.
+{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2019-10-28-at-12.17.45-am.png)
 
