@@ -4,50 +4,30 @@ description: >-
   drift, as well as provide explanations for predictions.
 ---
 
-# Fairness, Drift and Explainability
+# Fairness and Drift
 
-## 1. Fairness, Drift and Explainability Configuration
+## 1. Fairness and Drift Configuration
 
-OpenScale helps organizations maintain regulatory compliance by tracing and explaining AI decisions across workflows, and intelligently detect and correct bias to improve outcomes. In this section we will enable the monitors in OpenScale. We could configure these monitors using the Jupyter notebook supplied in the project or through the OpenScale web interface. For this section, we will use the web interface.
+OpenScale helps organizations maintain regulatory compliance by tracing and explaining AI decisions across workflows, and intelligently detecting and correcting bias to improve outcomes. In this section we will enable the fairness and drift monitors in OpenScale. We could configure these monitors using the Jupyter notebook supplied in the project or through the OpenScale web interface. For this section, we will use the web interface.
 
 {% hint style="info" %}
 Feel free to open the notebook '_fairness-drift-explainability-monitors' to see how the monitors can be enabled programmatically._
 {% endhint %}
 
-### 1.1 Model Details
+### 1.1 Fairness Configuration
 
-Before we configure the monitor, we will confirm the details of our model.
+The fairness monitor scans the requests sent to your model deployment \(i.e the payload\) to ensure fair outcomes across different populations. In this lab, the credit risk model uses a training dataset that contains 20 attributes about each loan applicants. Two of those attributes - 'Sex' and 'Age' - are the ones we will monitor for bias.
 
 * Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
-![](../.gitbook/assets/screen-shot-2019-10-30-at-9.16.41-pm.png)
+![](../.gitbook/assets/screen-shot-2019-10-31-at-10.50.02-pm.png)
 
 * **Click** on **'Configure monitors'**   
 
 ![](../.gitbook/assets/screen-shot-2019-10-30-at-9.46.07-pm.png)
 
-* Before we configure the fairness monitor, we will confirm the details of our model. **Click** on '**Model details**' on the left panel and then on the '**Begin**' button \(many of the parameters in the subsequent steps are pre-filled\).
-
-![](../.gitbook/assets/screen-shot-2019-10-31-at-12.19.29-am.png)
-
-* Some of the monitors will use the model training data. We have the option of providing the location of that training data for OpenScale to use or to gather the information needed locally and upload it. Select the '**Manual configure monitors'** tile and click the '**Next**' button.  ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.32.04-am.png) 
-* We already have the training data uploaded in a db2 instance and the connection information should be pre-filled. Click the 'Next' button
-* On the 'Select your training table' panel, **click** the 'Next' button.   ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.35.03-am.png) 
-* On the 'Select the label column from the training data' panel,  'Risk' should be pre-selected as our label. **Click** the 'Next' button  ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.38.22-am.png) 
-* On the 'Select the features used to train the AI deployment', the all of the features should be pre-selected. **Click** the 'Next' button  ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.40.48-am.png) 
-* On the 'Select the text and categorical features', the non-numeric features should be pre-selected. **Click** the 'Next' button   ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.43.23-am.png) 
-* On the 'Select the deployment prediction column', the column where our models prediction is stored \('predictedLabel'\) should be pre-selected. **Click** the 'Next' button   ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.45.45-am.png) 
-* On the 'Select the prediction probability column', the column where our models prediction probabilities are stored \('probability'\) should be pre-selected. **Click** the 'Next' button 
-* On the 'Select the transaction ID column \(optional\)', we will not be adding a transaction column at this point. **Click** the 'Next' button 
-* Finally, on the 'Model details summary' panel, click the 'Save' button.  ![](../.gitbook/assets/screen-shot-2019-10-31-at-12.51.14-am.png) 
-* Completing the model details will enable explainability.
-
-### 1.2 Fairness Configuration
-
-The fairness monitor scans the requests sent to your model deployment \(i.e the payload\) to ensure fair outcomes across different populations. In this lab, the credit risk model uses a training dataset that contains 20 attributes about each loan applicants. Two of those attributes - 'Sex' and 'Age' - are the ones we will monitor for bias.
-
-* Continuing from the configure monitors page, **Click** on 'Fairness' on the left panel and then on the 'Begin' button.
+* **Click** on 'Fairness' on the left panel and then on the 'Begin' button.
 
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-1.07.22-am.png)
 
@@ -70,15 +50,16 @@ The fairness monitor scans the requests sent to your model deployment \(i.e the 
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-1.32.40-am.png)
 
 * Complete the same configuration for the 'Age' feature. For this feature we want 
-  * The monitored group is 18 - 25. The majority group is 26 - 75
+  * The Reference \(majority\) group is 26 - 75
+  * The monitored group is 18 - 25. 
   * The fairness alert threshold should be 95%
-* Finally, we have to specify a minimum number of records \(scoring requests\) that need to be received before calculating fairness. Set it to 200 for the lab.
+* Finally, we have to specify a minimum number of records \(scoring requests\) that need to be received before calculating fairness. Set it to 200 for the lab and click the 'Next' button
 
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-1.41.01-am.png)
 
 * **Click** the 'Save' button on the summary page.
 
-### 1.3 Drift Configuration
+### 1.2 Drift Configuration
 
 The drift monitor scans the requests sent to your model deployment \(i.e the payload\) to ensure the model is robust and does not drift over time. Drift in model predictions can occur either because the requests sent to the model are requests similar to samples in the training data where the model struggled, or because the requests are becoming inconsistent with the training data the model originally used.
 
@@ -95,7 +76,7 @@ The drift monitor scans the requests sent to your model deployment \(i.e the pay
 * Click the 'Save' button.
 * The drift model will take a bit of time to train. While it trains, proceed to the next section of the lab below.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.00.31-am.png)
+![](../.gitbook/assets/screen-shot-2019-10-31-at-10.57.37-pm.png)
 
 ## 2. Run Scoring Requests
 
@@ -140,8 +121,13 @@ The fairness and drift monitors we configured will automatically be checked ever
 * _**Click**_ on the _**'Model Monitors'**_  tab and **Click** will see the one deployment you configured in the previous section. 
 * You will see we now have two additional sections in the deployment dashboard \(Fairness and Drift\). 
 * Click on 'Sex' under Fairness and then click on the 'Check fairness now link on the right.
+* When the evaluation completes, the page will refresh with bias metrics.
 
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-2.23.38-am.png)
+
+{% hint style="info" %}
+You can also trigger the monitor evaluations programmatically. The notebook called 'dataload-queries-monitortriggers' contains examples on invoking these monitor runs.
+{% endhint %}
 
 ## 4. Explore the Watson OpenScale UI
 
@@ -152,7 +138,7 @@ Now that we have configured fairness and submitted some scoring requests to our 
 * Go back to the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
-![](../.gitbook/assets/screen-shot-2019-10-26-at-9.11.48-pm.png)
+![](../.gitbook/assets/screen-shot-2019-10-31-at-11.07.16-pm.png)
 
 * We see there is an alert that the model is exhibiting bias. In this case, we have gone beyond the threshold we set to specify an acceptable difference between the percentage of Favorable outcomes for the Monitored group as compared to the percentage of Favorable outcomes for the Reference group \(Favorable % for monitored group / Favorable % for reference group \* 100 \)
 * _**Click**_ on the tile for the model deployment to view details for the deployment. 
@@ -168,6 +154,10 @@ You must exceed the minimum number of records in the payload table for the fairn
 {% endhint %}
 
 #### 4.1.1 Fairness Alert Details
+
+{% hint style="info" %}
+The screenshots and metrics numbers may not match your model/deployment. Since we submitted 200 random requests, the data will vary.
+{% endhint %}
 
 We can now dive deeper into the fairness alert, move your mouse pointer over the graph to one of the blue points below the red threshold line \(you will see a 'view details' pop up\)
 
@@ -199,15 +189,18 @@ Watson OpenScale supports bias detection for models using structured data in its
 
 For both regulatory and business reasons, lenders need to be able to understand why their credit risk models make specific decisions. A powerful feature for OpenScale is the ability to provide an explanation for why a model made a particular prediction.
 
-* You can also explain the transactions associated to the fairness metrics, from the 'Payload + Perturbed' screen, **Click** on the **View transactions** button in the fairness details chart. 
+* _**Click**_ the 'Monitored Feature' drop down and select 'Sex', to view fairness details for gender.
+* You can  explain the transactions associated to the fairness metrics, from the 'Payload + Perturbed' screen, **Click** on the **View transactions** button in the fairness details chart. 
 
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-2.38.06-am.png)
 
 We want to explore on the transaction that was considered biased. Click on the 'Biased transactions' radio button and then click on 'Explain' for one of the transactions in the table.
 
-Note that this view can take some time to populate as OpenScale generates the explanations for this transaction.
-
 ![](../.gitbook/assets/screen-shot-2019-10-31-at-2.40.46-am.png)
+
+{% hint style="info" %}
+Note that the 'Explain a transaction' view can take some to generate as OpenScale is building the contrastive explanations by perturbing data and submitting scoring requests.
+{% endhint %}
 
 From the transaction explanation page, you can see a breakdown of the features contributing to either "Risk" or "No Risk" outcome. We can also see advanced explanations, which show:
 

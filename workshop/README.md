@@ -7,15 +7,15 @@ description: >-
 
 # Introduction
 
-## Trust in AI
-
-Fairness, robustness, and explainability are key attributes of trusted AI
-
-### Watson OpenScale
+## Trust in AI & Watson OpenScale
 
 Watson OpenScale tracks and measures outcomes from your AI models, and helps ensure they remain fair, explainable and compliant wherever your models were built or are running. OpenScale is designed as an open platform that will operate with various model development environments and various open source tools, including TensorFlow, Keras, SparkML, Seldon, AWS SageMaker, AzureML and more. 
 
-Watson OpenScale provides a set of monitoring and management tools that help you build trust and implement control and governance structures around your AI investments
+Watson OpenScale provides a set of monitoring and management tools that help you build trust and implement control and governance structures around your AI investments.
+
+* Providing production monitoring for compliance and safeguards \(auditing model decisions, detecting biases, etC\)
+* Ensuring that models are resilient to changing situations
+* Aligning model performance with business outcomes 
 
 ## Lab Overview
 

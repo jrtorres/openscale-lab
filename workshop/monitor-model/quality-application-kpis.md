@@ -4,16 +4,16 @@ description: >-
   model to ensure it meets quality thresholds.
 ---
 
-# Quality and Application KPIs
+# Quality and Explainability
 
-## Quality and Application KPI Notebook
+## Quality and Explainability Notebook
 
-Quality and Application / Business monitors allow users to track performance of production AI and its impact on business goals. This time we will use a Jupyter notebook in the project you imported to enable these additional capabilities in the subscription. 
+Quality \(performance\) monitors allow users to track performance of production AI and its impact on business goals. We will use a Jupyter notebook in the project you imported to enable these additional capabilities in the subscription. 
 
 ### 1.1 Open Notebook
 
 * In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page.
-* Under the 'Notebooks' section, _**Click**_ on the _**'quality-businesskpi-monitors'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
+* Under the 'Notebooks' section, _**Click**_ on the _**'quality-explainability-monitors'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
 
 ![](../.gitbook/assets/screen-shot-2019-10-28-at-12.28.12-am.png)
 
@@ -39,18 +39,18 @@ Alternatively, you can elect to run all the cells by clicking the **'Run All'** 
 
 The quality monitor scans the requests sent to your model deployment \(i.e the payload\) to let you know how well your model predicts outcomes. Quality metrics are calculated hourly, when OpenScale sends manually labeled feedback data set to the deployed model. 
 
-* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com) \([https://aiopenscale.cloud.ibm.com](https://aiopenscale.cloud.ibm.com)\) in the same browser \(but separate tab\) as you used to run the Watson Studio notebook. 
+* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
-![](../.gitbook/assets/screen-shot-2019-10-28-at-2.11.56-am.png)
+![](../.gitbook/assets/screen-shot-2019-10-31-at-10.43.42-pm.png)
 
 * We now have an alert on the Quality of the model. 
 * _**Click**_ on the deployment tile to open the details page and then _**Click**_ on the _'Area under ROC'_  option on the left panel. 
 * We have set a threshold of 70% and based on the feedback data loaded in the notebook, the model is performing below that threshold.
 
-![](../.gitbook/assets/screen-shot-2019-10-28-at-2.30.26-am.png)
+![](../.gitbook/assets/screen-shot-2019-10-31-at-10.45.05-pm.png)
 
-* Feel free to explore the other quality metrics for the model. You can also view more details for a particular point on the performance graph by clicking on the point.
+* Feel free to explore the other quality metrics for the model. **Click** on the blue dot \(which represents the quality run we initiated from the Jupyter Notebook\), to view more details for a particular point on the performance graph.
 
 ![](../.gitbook/assets/screen-shot-2019-10-28-at-2.33.09-am.png)
 

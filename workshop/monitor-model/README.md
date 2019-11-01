@@ -16,8 +16,8 @@ Model monitors allow Watson OpenScale to capture information about the deployed 
 For many of these monitors, OpenScale will make use of the following data:
 
 * \(Optional\) Training data that was used to train the model.
-* Transaction data \(input/request and output/response information\) going to the deployed models
-* Feedback data with labeled predictions to measure the effectiveness of predictions and when retraining is needed. 
+* Transaction data \(input/request and output/response information\) going to the deployed models which is stored in the payload table of the data mart.
+* Feedback data with labeled predictions to measure the effectiveness of predictions and when retraining is needed which is stored in the feedback table of the data mart.
 
 {% hint style="info" %}
 For this lab since our model is deployed in Watson Machine Learning, the scoring payload is automatically sent to Watson OpenScale and stored in its data mart when you score the model.

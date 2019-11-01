@@ -12,7 +12,7 @@ OpenScale gather the input received by the model it is monitoring as well as the
 
 ### Build a payload chart
 
-* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com) \([https://aiopenscale.cloud.ibm.com](https://aiopenscale.cloud.ibm.com)\) in the same browser \(but separate tab\) as you used to run the Watson Studio notebook. 
+* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com). 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
 ![](.gitbook/assets/screen-shot-2019-10-28-at-2.11.56-am.png)
@@ -40,7 +40,7 @@ You may have to change the Date range to see data in the graph.
 ### 1.1 Open Notebook
 
 * In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page. 
-* Under the 'Notebooks' section, _**Click**_ on the _**'4-payloadanalytics'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
+* Under the 'Notebooks' section, _**Click**_ on the _**'payload-analytics'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
 
 ![](.gitbook/assets/screen-shot-2019-10-28-at-3.04.34-am.png)
 

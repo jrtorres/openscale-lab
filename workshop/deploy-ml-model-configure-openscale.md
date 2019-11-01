@@ -1,10 +1,10 @@
 ---
 description: >-
-  In this section, we will build/deploy a machine learning model that predicts
-  credit risk and set up OpenScale to monitor the model.
+  In this section, we will deploy a machine learning model that predicts credit
+  risk and set up OpenScale to monitor the model.
 ---
 
-# Build Model & Configure Watson OpenScale
+# Deploy Model & Configure Watson OpenScale
 
 {% hint style="info" %}
 Although this lab is showing a Spark ML model deployed on Watson Machine Learning \(WML\), models do not have to be built in Watson Studio nor deployed to WML to be monitored with OpenScale.   Watson OpenScale is an open platform that can manage production models in a variety of environments. See resources in the [Wrap-up section ](wrap-up.md)for examples of other models or deployment environments. 
@@ -25,7 +25,7 @@ The first notebook in the project you imported will deploy a model and configure
 ![](.gitbook/assets/screen-shot-2019-10-30-at-7.44.07-pm.png)
 
 {% hint style="info" %}
-_The project also contains multiple model creation notebooks that actually step through the process of building the credit risk models using different libraries / algorithms._
+_The project also contains multiple model creation notebooks that actually step through the process of building the credit risk models using different libraries / algorithms. Feel free to explore those later to if you want to build a model._
 {% endhint %}
 
 ### 1.2 Update Credentials

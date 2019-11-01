@@ -13,10 +13,12 @@ Below are some additional tips, resources and links you can explore.
 If you used a Spark Python Jupyter kernel to run the lab, you can stop the environments to save capacity unit hours on your account
 
 1. In the Watson Studio web interface. _**Click**_ on the three horizontal bars on the top left corner.
-2. From the menu, select the **'Environment Runtimes'** option.  ![](.gitbook/assets/screen-shot-2019-10-28-at-10.14.44-pm.png) 
+2. From the menu, expand the 'Manage section and select the **'Environment Runtimes'** option.  ![](.gitbook/assets/screen-shot-2019-10-28-at-10.14.44-pm.png) 
 3. Under the 'Active environment runtimes', if you see any running environments, you can shut them down by clicking on the three vertical dots under the 'Actions' column and selected the 'Stop' option   ![](.gitbook/assets/screen-shot-2019-10-28-at-10.21.12-pm.png) 
 
 ## Additional Watson OpenScale Resources
+
+{% embed url="https://developer.ibm.com/components/watson-openscale/" %}
 
 {% embed url="https://cloud.ibm.com/docs/ai-openscale?topic=ai-openscale-gettingstarted" caption="Watson OpenScale Documentation" %}
 
