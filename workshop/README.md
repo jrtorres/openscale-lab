@@ -13,7 +13,7 @@ Watson OpenScale tracks and measures outcomes from your AI models, and helps ens
 
 Watson OpenScale provides a set of monitoring and management tools that help you build trust and implement control and governance structures around your AI investments.
 
-* Providing production monitoring for compliance and safeguards \(auditing model decisions, detecting biases, etC\)
+* Providing production monitoring for compliance and safeguards \(auditing model decisions, detecting biases, etc\)
 * Ensuring that models are resilient to changing situations
 * Aligning model performance with business outcomes 
 

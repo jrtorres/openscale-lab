@@ -11,7 +11,7 @@ description: >-
 
 Download the following zip file: 
 
-{% file src="../.gitbook/assets/openscale-lab.zip" %}
+{% file src="../.gitbook/assets/openscalelab.zip" %}
 
 ## Import Project
 
